@@ -64,11 +64,11 @@ const middle = function(arr) { //Nameless function assigned to the variable midd
 
   } else if (arr.length % 2 === 1) {//Check to see if array is odd
 
-    let midIndex = (arr.length - 1) / 2; 
+    let midIndex = (arr.length - 1) / 2;
     result = [arr[midIndex]]; //Returns middle index
     return result;
 
-  } else { //All other cases are even 
+  } else { //All other cases are even
 
     let lowMiddle = Math.floor((arr.length - 1) / 2);
     let highMiddle = Math.ceil((arr.length - 1) / 2);
