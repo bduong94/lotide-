@@ -68,7 +68,7 @@ const eqObjects = function(object1, object2) { //Nameless function assigned to t
         console.log(Array.isArray(object1[key]));
 
         if (!(eqArrays(object1[key], object2[key]))) { //If value is false
-          return false; 
+          return false;
         }
 
       } else if (object1[key] !== object2[key]) { //Checks to see if value of the key is the same in both objects
@@ -82,7 +82,7 @@ const eqObjects = function(object1, object2) { //Nameless function assigned to t
   }
 
   return false; //Fails all tests
-}
+};
 
 //Test Case
 const ab = {a: "1", b: "2"};
