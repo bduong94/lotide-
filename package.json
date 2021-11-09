@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@bduong94/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide for learning purposes",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/bduong94/lotide-.git"
   },
-  "author": "",
+  "author": "Brian Duong",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bduong94/lotide-/issues"
