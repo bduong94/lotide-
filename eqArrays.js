@@ -1,19 +1,3 @@
-const assertEqual = function(actual, expected) { //Nameless function assigned to the variable assertEqual
-
-  if (actual === expected) { //Compares variables actual and expected to see if they are equal
-
-    // return console.log('✅✅✅ Assertion Passed: "' + actual + '" === "' + expected + '"'); //Prints out pass message without Template Literals
-
-    return console.log(`✅✅✅ Assertion Passed: "${actual}" === "${expected}"`); //Prints out pass message with Template Literals
-
-  }
-
-  // return console.log('🛑🛑🛑 Assertion Failed: "' + actual + '" !== "' + expected + '"'); //Prints out fail message without Template Literals
-
-  return console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`); //Prints out fail message with Template Literals
-
-};
-
 const eqArrays = function(arr1, arr2) { //Nameless function assigned to the variable eqArrays
 
   /*
@@ -44,8 +28,4 @@ const eqArrays = function(arr1, arr2) { //Nameless function assigned to the vari
   return true; //Passes all tests, elements are equal
 };
 
-//Test Case
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); //All elements are equal
-assertEqual(eqArrays([1, 2, 3], [1, 2, '3']), true); //One element is different
-assertEqual(eqArrays([1, 2, '3'], [1, 2, '3']), true); //Checks string and integers
-assertEqual(eqArrays([1, 2, '3'], [1, 2]), true); //Checks different lengths
+module.exports = eqArrays;
