@@ -32,7 +32,7 @@ const eqArrays = function(arr1, arr2) { //Nameless function assigned to the vari
 
   }
 
-  for(let i = 0; i < arr1.length; i++) { //Iterates over the length of arr1
+  for (let i = 0; i < arr1.length; i++) { //Iterates over the length of arr1
 
     if (arr1[i] !== arr2[i]) { //Checks at the same index for both arrays if the elements are equal
 
@@ -45,7 +45,7 @@ const eqArrays = function(arr1, arr2) { //Nameless function assigned to the vari
 };
 
 //Test Case
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); //All elements are equal 
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); //All elements are equal
 assertEqual(eqArrays([1, 2, 3], [1, 2, '3']), true); //One element is different
 assertEqual(eqArrays([1, 2, '3'], [1, 2, '3']), true); //Checks string and integers
 assertEqual(eqArrays([1, 2, '3'], [1, 2]), true); //Checks different lengths
