@@ -63,9 +63,11 @@ const eqObjects = function(object1, object2) { //Nameless function assigned to t
 
     for (const key in object1) {
 
+      //Check to see if key-value is object && not an array
+      if (typeof object1[key] === 'object' && !Array.isArray(object1[key])) {
+        return eqObjects(object1[key], object2[key]);
+      }
       if (Array.isArray(object1[key])) { ///Checks to see if array
-        
-        console.log(Array.isArray(object1[key]));
 
         if (!(eqArrays(object1[key], object2[key]))) { //If value is false
           return false;
@@ -108,3 +110,8 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 
 let test4 = eqObjects(cd, cd2); // => false
 assertEqual(test4, false);
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
