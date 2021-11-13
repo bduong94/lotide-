@@ -14,6 +14,8 @@ This project was created and published by me as part of my learnings at Lighthou
 
 `npm install @bduong94/lotide`
 
+Link can also be found at: https://www.npmjs.com/package/@bduong94/lotide
+
 **Require it:**
 
 `const _ = require('@bduong94/lotide');`
