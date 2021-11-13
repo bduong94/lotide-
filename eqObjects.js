@@ -21,7 +21,9 @@ const eqObjects = function(object1, object2) { //Nameless function assigned to t
       //Check to see if key-value is object && not an array
       if (typeof object1[key] === 'object' && !Array.isArray(object1[key])) {
 
-        return eqObjects(object1[key], object2[key]);
+        if (!eqObjects(object1[key], object2[key])){
+          return false;
+        };
 
       } else if (Array.isArray(object1[key])) { ///Checks to see if array
 
