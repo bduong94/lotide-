@@ -17,11 +17,15 @@ const eqArrays = function(arr1, arr2) { //Nameless function assigned to the vari
   }
 
   for (let i = 0; i < arr1.length; i++) { //Iterates over the length of arr1
-
-    if (arr1[i] !== arr2[i]) { //Checks at the same index for both arrays if the elements are equal
+    //Check to see if element is an array
+    if (Array.isArray(arr1[i])) {
+      if (!eqArrays(arr1[i], arr2[i])) {
+        return false;
+      }
+    } else if (arr1[i] !== arr2[i]) { //Checks at the same index for both arrays if the elements are equal
 
       return false;
-
+  
     }
   }
 
